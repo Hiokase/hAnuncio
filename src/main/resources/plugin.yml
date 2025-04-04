@@ -1,0 +1,53 @@
+name: hAnuncio
+version: 1.0.0
+main: hplugins.anuncio.hAnuncio
+description: A fully configurable advertisement plugin for Minecraft
+authors: [hPlugins]
+api-version: 1.13
+softdepend: [Vault, EssentialsX, CMI, PlayerPoints, GemsEconomy, TokenManager]
+
+commands:
+  anunciar:
+    description: Create an announcement
+    usage: /anunciar
+    aliases: [anuncio, announce]
+  hac:
+    description: Admin commands for hAnuncio
+    usage: /hac <command>
+    aliases: [hanuncio, ha]
+
+permissions:
+  hanuncio.anunciar:
+    description: Allows the player to create announcements
+    default: true
+  hanuncio.admin:
+    description: Allows access to admin commands
+    default: op
+    children:
+      hanuncio.admin.reload: true
+      hanuncio.admin.category.create: true
+      hanuncio.admin.category.edit: true
+      hanuncio.admin.category.delete: true
+      hanuncio.admin.category.list: true
+      hanuncio.admin.economy: true
+  hanuncio.admin.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  hanuncio.admin.category.create:
+    description: Allows creating announcement categories
+    default: op
+  hanuncio.admin.category.edit:
+    description: Allows editing announcement categories
+    default: op
+  hanuncio.admin.category.delete:
+    description: Allows deleting announcement categories
+    default: op
+  hanuncio.admin.category.list:
+    description: Allows listing announcement categories
+    default: op
+  hanuncio.bypasslimit:
+    description: Bypass the daily announcement limit
+    default: op
+  hanuncio.admin.economy:
+    description: Allows managing the economy system
+    default: op

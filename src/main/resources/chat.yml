@@ -1,0 +1,22 @@
+# hAnuncio - Chat Configuration
+# ----------------------------
+
+# Chat format for announcements without category
+format: "&8[&6Anúncio&8] &7%player%&8: &f%message%"
+
+# Chat format for announcements with category
+category-format: "&8[&6Anúncio&8] &8[%category_prefix%%category%&8] &7%player%&8: %category_color%%message%"
+
+# Hover text when a player hovers over the announcement (supports 1.8+)
+hover-text:
+  enabled: true
+  text:
+    - "&6Anúncio enviado por &e%player%"
+    - "&6Categoria: &e%category%"
+    - "&7Clique para enviar uma mensagem privada"
+
+# Click action when a player clicks on the announcement (supports 1.8+)
+click-action:
+  enabled: true
+  action: "suggest_command"  # suggest_command, run_command, open_url
+  value: "/tell %player% "

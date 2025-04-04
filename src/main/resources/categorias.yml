@@ -1,0 +1,37 @@
+# hAnuncio - Categories Configuration
+# ----------------------------
+
+# Announcement categories
+categories:
+  venda:
+    name: "Venda"
+    prefix: "&aV"
+    color: "&a"
+  
+  compra:
+    name: "Compra"
+    prefix: "&cC"
+    color: "&c"
+  
+  troca:
+    name: "Troca"
+    prefix: "&eT"
+    color: "&e"
+  
+  procura:
+    name: "Procura"
+    prefix: "&bP"
+    color: "&b"
+  
+  informacao:
+    name: "Informação"
+    prefix: "&9I"
+    color: "&9"
+
+# Price multipliers for each category
+multipliers:
+  venda: 1.0
+  compra: 1.0
+  troca: 1.2
+  procura: 0.8
+  informacao: 0.5

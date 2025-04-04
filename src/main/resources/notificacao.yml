@@ -1,0 +1,20 @@
+# hAnuncio - Notification Configuration
+# ----------------------------
+
+# Enable notifications for announcements
+enabled: true
+
+# Use action bar for notifications (1.9+)
+use-action-bar: true
+
+# Action bar message
+message: "&e%player% &7enviou um anúncio!"
+
+# Title notification (used if action bar is disabled or on older versions)
+title: "&6Novo Anúncio!"
+subtitle: "&7De: %player%"
+
+# Title timing (in ticks, 20 ticks = 1 second)
+fade-in: 10
+stay: 70
+fade-out: 20

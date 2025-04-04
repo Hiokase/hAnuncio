@@ -1,0 +1,22 @@
+# hAnuncio - Commands Configuration
+# ----------------------------
+
+# Announcement command configuration
+anunciar:
+  # Command name (you don't need to change this unless you modify plugin.yml)
+  name: "anunciar"
+  
+  # Command aliases (you don't need to change this unless you modify plugin.yml)
+  aliases:
+    - "anuncio"
+    - "announce"
+
+# Admin command configuration
+hac:
+  # Command name (you don't need to change this unless you modify plugin.yml)
+  name: "hac"
+  
+  # Command aliases (you don't need to change this unless you modify plugin.yml)
+  aliases:
+    - "hanuncio"
+    - "ha"

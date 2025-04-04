@@ -1,0 +1,59 @@
+# hAnuncio - Menu Configuration
+# ----------------------------
+
+menu:
+  # Menu title
+  title: "&8• &6Criar Anúncio &8•"
+  
+  # Menu size (must be a multiple of 9)
+  size: 27
+  
+  # Item to create an announcement
+  announcement-item:
+    # Item slot in the menu (0-26 for a 3x9 inventory)
+    slot: 13
+    
+    # Item material (supports XSeries materials)
+    material: "PAPER"
+    
+    # Use player head instead of regular item
+    use-player-head: false
+    
+    # Head owner (if use-player-head is true)
+    head-owner: "MHF_Question"
+    
+    # Item name
+    name: "&eCriar Anúncio"
+    
+    # Item lore (description)
+    lore:
+      - "&7Clique para criar um anúncio"
+      - "&7Preço: &a%price%"
+      - ""
+      - "&8Seu anúncio será enviado"
+      - "&8para todos os jogadores online!"
+  
+  # Category items configuration
+  category-item:
+    # Item material (supports XSeries materials)
+    material: "NAME_TAG"
+    
+    # Item name
+    name: "&6%category%"
+    
+    # Item lore (description)
+    lore:
+      - "&7Clique para selecionar a categoria"
+      - "&7Prefixo: &f%prefix%"
+      - ""
+      - "&8Os anúncios desta categoria serão"
+      - "&8exibidos com um prefixo especial."
+  
+  # Category slots in the menu
+  category-slots:
+    slot-0: 10
+    slot-1: 11
+    slot-2: 12
+    slot-3: 14
+    slot-4: 15
+    slot-5: 16

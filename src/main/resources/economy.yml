@@ -1,0 +1,97 @@
+# hAnuncio - Configuração de Economia
+# ----------------------------
+
+# Usar Vault para integração com economia (se disponível)
+use-vault: true
+
+# Usar JH_Economy (implementação especializada)
+use-jh-economy: true
+
+# Preço para criar um anúncio
+price: 100.0
+
+# Detectar automaticamente plugin de economia
+auto-detect-economy: true
+
+# Plugin de economia preferido (se auto-detecção estiver desabilitada)
+preferred-plugin: "Vault"
+
+# Usar comandos diretos de money (fallback se nenhum sistema de economia for encontrado)
+# Isto permite usar plugins que só funcionam com comandos, como alguns sistemas simplificados
+use-money-commands: true
+money-commands:
+  check-balance: "money %player%"
+  take-money: "money remove %player% %amount%"
+  add-money: "money give %player% %amount%"
+  # Defina como "console" para executar como console ou "player" para tentar como jogador
+  execute-as: "console"
+
+# Provedores de economia personalizados
+# Use este sistema para configurar qualquer plugin de economia
+custom-providers:
+  # JH_Economy
+  JH_Economy:
+    balance-method: "getMoney"
+    withdraw-method: "removeMoney"
+    deposit-method: "addMoney"
+    use-player-object: true
+    
+  # EssentialsX
+  EssentialsX:
+    balance-method: "getBalance"
+    withdraw-method: "withdrawPlayer"
+    deposit-method: "depositPlayer"
+    use-player-object: false
+    
+  # CMI
+  CMI:
+    balance-method: "getBalance"
+    withdraw-method: "takeBalance"
+    deposit-method: "addBalance" 
+    use-player-object: false
+    
+  # PlayerPoints
+  PlayerPoints:
+    balance-method: "look"
+    withdraw-method: "take"
+    deposit-method: "give"
+    use-player-object: false
+    
+  # GemsEconomy
+  GemsEconomy:
+    balance-method: "getBalance"
+    withdraw-method: "removeBalance"
+    deposit-method: "addBalance"
+    use-player-object: false
+    
+  # TokenManager
+  TokenManager:
+    balance-method: "getTokens"
+    withdraw-method: "removeTokens"
+    deposit-method: "addTokens"
+    use-player-object: true
+    
+  # CoinsAPI
+  CoinsAPI:
+    balance-method: "getCoins"
+    withdraw-method: "removeCoins"
+    deposit-method: "addCoins"
+    use-player-object: true
+
+# Sistema legado (para compatibilidade)
+# Não altere esta seção, use 'custom-providers' acima para novos plugins
+supported-plugins:
+  # EssentialsX integration
+  EssentialsX:
+    balance-method: "getBalance"
+    withdraw-method: "withdrawPlayer"
+    
+  # CMI integration
+  CMI:
+    balance-method: "getBalance"
+    withdraw-method: "takeBalance"
+    
+  # PlayerPoints integration
+  PlayerPoints:
+    balance-method: "look"
+    withdraw-method: "take"

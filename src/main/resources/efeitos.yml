@@ -1,0 +1,70 @@
+# hAnuncio - Effects Configuration
+# ----------------------------
+
+# Sound effects when an announcement is sent
+sounds:
+  # Enable sound effects
+  enabled: true
+  
+  # Sound name (supports XSeries sounds)
+  name: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  
+  # Sound volume (0.0 - 1.0)
+  volume: 1.0
+  
+  # Sound pitch (0.5 - 2.0)
+  pitch: 1.0
+
+# Particle effects when an announcement is sent
+particles:
+  # Enable particle effects
+  enabled: true
+  
+  # Effect type (FIREWORK, PARTICLE)
+  type: "FIREWORK"
+  
+  # Firework configuration (if type is FIREWORK)
+  firework:
+    # Firework power (0-3)
+    power: 1
+    
+    # Firework type (BALL, BALL_LARGE, STAR, BURST, CREEPER)
+    type: "BALL"
+    
+    # Use random colors
+    random-colors: true
+    
+    # Custom colors (if random-colors is false)
+    # Format: R,G,B;R,G,B (semicolon-separated RGB values)
+    colors: "255,0,0;0,255,0;0,0,255"
+    
+    # Use random fade colors
+    random-fade-colors: true
+    
+    # Custom fade colors (if random-fade-colors is false)
+    fade-colors: "255,255,255"
+    
+    # Enable flicker effect
+    flicker: true
+    
+    # Enable trail effect
+    trail: true
+    
+    # Prevent firework damage to players
+    prevent-damage: true
+  
+  # Custom particle configuration (if type is PARTICLE)
+  custom:
+    # Particle name
+    name: "VILLAGER_HAPPY"
+    
+    # Particle count
+    count: 20
+    
+    # Particle offset
+    offset-x: 0.5
+    offset-y: 0.5
+    offset-z: 0.5
+    
+    # Particle speed
+    speed: 0.1

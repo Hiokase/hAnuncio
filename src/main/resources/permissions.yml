@@ -1,0 +1,44 @@
+# hAnuncio - Permissions Configuration
+# ----------------------------
+
+# Announcement permissions
+announcements:
+  # Permission to create announcements
+  create: "hanuncio.anunciar"
+  
+  # Permission to view announcements
+  view: "hanuncio.view"
+  
+  # Permission to bypass cooldown
+  bypass-cooldown: "hanuncio.bypasscooldown"
+  
+  # Permission to bypass daily limit
+  bypass-limit: "hanuncio.bypasslimit"
+  
+  # Permission to use colored text in announcements
+  use-color: "hanuncio.color"
+
+# Admin permissions
+admin:
+  # Permission to use admin commands
+  use: "hanuncio.admin"
+  
+  # Permission to reload the plugin
+  reload: "hanuncio.admin.reload"
+  
+  # Category management permissions
+  category:
+    # Permission to create categories
+    create: "hanuncio.admin.category.create"
+    
+    # Permission to edit categories
+    edit: "hanuncio.admin.category.edit"
+    
+    # Permission to delete categories
+    delete: "hanuncio.admin.category.delete"
+    
+    # Permission to list categories
+    list: "hanuncio.admin.category.list"
+  
+  # Economy management permissions
+  economy: "hanuncio.admin.economy"

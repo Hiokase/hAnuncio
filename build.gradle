@@ -1,0 +1,61 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+}
+
+group = "hplugins.anuncio"
+version = "1.0-SNAPSHOT"
+description = "Plugin de Anuncio"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/" }
+    maven { url "https://oss.sonatype.org/content/groups/public/" }
+    maven { url "https://jitpack.io" }
+    maven { url "https://repo.aikar.co/content/groups/aikar/" }
+    maven { url "https://repo.extendedclip.com/content/repositories/placeholderapi/" }
+    maven { url "https://maven.enginehub.org/repo/" }
+}
+
+dependencies {
+    implementation "com.github.cryptomorin:XSeries:11.2.0.1"
+    implementation "com.github.MilkBowl:VaultAPI:1.7"
+    implementation "org.jetbrains:annotations:23.0.0"
+    implementation "com.sk89q.worldedit:worldedit-bukkit:7.2.9"
+    implementation "com.sk89q.worldedit:worldedit-core:7.2.0-SNAPSHOT"
+    compileOnly "org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT"
+    compileOnly "me.clip:placeholderapi:2.11.6"
+    implementation "mysql:mysql-connector-java:8.0.30"
+    implementation "org.xerial:sqlite-jdbc:3.39.3.0"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+tasks.withType(Javadoc) {
+    options.encoding = "UTF-8"
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from configurations.runtimeClasspath.collect {
+        it.isDirectory() ? it : zipTree(it)
+    }
+    into("META-INF/maven/$project.group/$project.name") {
+        from generatePomFileForMavenPublication
+    }
+}

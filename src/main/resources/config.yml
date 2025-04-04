@@ -1,0 +1,27 @@
+# hAnuncio - Main Configuration
+# ----------------------------
+
+# General configuration
+messages:
+  player-only: "&cOnly players can use this command!"
+  no-permission: "&cYou don't have permission to do this!"
+  cooldown: "&cYou must wait %time% seconds before creating another announcement!"
+  daily-limit-reached: "&cYou have reached your daily limit of announcements!"
+  type-announcement: "&eType your announcement in the chat within %time% seconds!"
+  time-expired: "&cTime expired! Your announcement has been cancelled."
+  not-enough-money: "&cYou don't have enough money to create an announcement! Cost: %price%"
+  announcement-sent: "&aYour announcement has been sent successfully!"
+  category-selected: "&aCategory selected: %category%"
+
+# Time limit to write the announcement (in seconds)
+announcement-time-limit: 30
+
+# Cooldown between announcements (in seconds)
+announcement-cooldown: 300
+
+# Maximum number of announcements per player per day (0 = unlimited)
+daily-announcement-limit: 5
+
+# Maximum time to keep announcements in memory (in milliseconds)
+# Default: 1 hour = 3600000 milliseconds
+announcement-max-age: 3600000
